@@ -1,0 +1,62 @@
+.sad-calculator {
+	width: 500px;
+	height: 500px;
+	background: #e3e3e3;
+	border-radius: 10px;
+	margin: 0 auto;
+}
+
+.sad-calculator h1 {
+	text-align: center;
+}
+
+.enter-task {
+	left: 30%;
+}
+
+.sad-calculator .enter-task p {
+	margin: 3px 10px 0 5px;
+}
+
+.sad-calculator input {
+	width: 40px;
+}
+
+.sad-calculator .enter-task > * {
+	float: left;
+}
+
+button {
+}
+
+
+
+
+
+
+
+
+
+#result {
+	clear: both;
+	width: 100%;
+	text-align: center;
+	margin-left: 100px;
+	margin-top: 100px;
+}
+
+#result2 {
+	clear: both;
+	width: 500px;
+	margin-left: 100px;
+	text-align: center;
+	margin-top: 20px;
+}
+#result  > *, #result2 > * {
+	float: left;
+	width: 150px;
+}
+
+#result  p, #result2 p {
+	margin-top: 0px;
+}

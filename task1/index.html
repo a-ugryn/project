@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+	<title>calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script type="text/javascript" src="jquery-1.11.1.js"></script>
+</head>
+<body>
+ <div class="sad-calculator">
+ 	<h1>Calculator</h1>
+ 	<form class="enter-task">
+ 		<input id="a" />
+ 		<p>x<sup>2</sup> +</p>
+ 		<input id="b" />
+ 		<p>x +</p>
+ 		<input id="c" />
+ 		<p>= 0</p>
+ 	</form>
+
+ 	<button id="calculate">Calculate</button>
+
+ 	<div id="result"><span>x1=</span><p></p></div>
+ 	<div id="result2"><span>x2=</span><p></p></div>
+ </div>
+
+
+<script>
+	$('#result span, #result2 span').hide();
+	$('#calculate').on('click', function(){
+		var a = $('#a').val();
+		var b = $('#b').val();
+		var c = $('#c').val();
+		var first = (b*b);
+		var second = (+4*a*c);
+		var d = Number(first-second);
+		var sqrt_d = Math.sqrt( d );
+		var minus_b =(-b);
+		var up_plus = (minus_b+sqrt_d);
+		var up_minus = (minus_b-sqrt_d);
+		var down = (2*c);
+		var x1 = (up_plus/down);
+		var x2 = (up_minus/down);
+		if (d<0) {
+			$('#result span, #result2 span').hide();
+			$('#result p').text('HAVE NO ANSWER!!!');
+			$('#result2 p').text('one more time?');
+		}
+		else if (d==0) {
+			$('#result span').show();
+			$('#result2 span').hide();
+			$('#result p').text(x1);
+			$('#result2 p').text("only one answer =(");
+		}
+		else {
+			$('#result span, #result2 span').show();
+			$('#result p').text(x1);
+			$('#result2 p').text(x2);
+		}	
+	});
+
+</script>
+</body>
+</html>
